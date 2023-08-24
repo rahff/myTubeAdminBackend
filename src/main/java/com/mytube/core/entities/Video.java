@@ -13,7 +13,7 @@ public class Video {
   private final VideoUrl videoUrl;
   private VideoDescription description;
   private VideoTitle title;
-  private Boolean reservedSubscriber;
+  private final Boolean reservedSubscriber;
 
   private Video(CreateVideoMetaDataRequest request) {
     this.id = new EntityId(null);

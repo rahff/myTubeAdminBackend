@@ -19,7 +19,6 @@ public class UpdateVideoMetaDataCommand extends Command<UpdateVideoMetaDataReque
     this.repository = repository;
     this.fileUploader = fileUploader;
   }
-
   public void exec(UpdateVideoMetaDataRequest request, ClientContext ctx) throws UploadFileFailedException {
     AdminGuard.against(ctx);
     var foundedMiniature = repository.findById(request.id()).orElseThrow();
